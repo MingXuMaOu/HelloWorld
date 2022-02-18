@@ -1,6 +1,7 @@
 package com.example.helloworld
 
 import kotlin.math.max
+var content: String? = "hello"
 
 fun main(){
 //    println("Hello Kotlin!")
@@ -28,9 +29,53 @@ fun main(){
 //    val student2 = Student("Jack",19)
 //    val student = Student("a123",5,"Jack",19)
 
-    val student = Student("Jack",19)
+//    val student = Student("Jack",19)
+//    doStudy(null)
+//    val cell1 = CellPhone("SamSung",1299.99)
+//    val cell2 = CellPhone("SamSung",1299.99)
+//    println(cell1 == cell2)
+//    Singleton.name = "dsfs"
+//    Singleton.singletonTest()
 
+//    val list = listOf("Apple","Banana","Orange","Pear","Grape")
+//    val list = mutableListOf("Apple","Banana","Orange","Pear","Grape")
+//    list.add("Watermelon")
+//    val list = setOf("Apple","Banana","Orange","Pear","Grape")
+//    for (fruit in list) {
+//        println(fruit)
+//    }
+//    val map = mapOf("Apple" to 1,"Banana" to 2,"Orange" to 3,"Pear" to 4,"Grape" to 5)
+//    for ((fruit, number) in map) {
+//        println(fruit + " " + number)
+//    }
+//    val list = listOf("Apple","Banana","Orange","Pear","Grape")
+//    val max = list.maxByOrNull { it.length }
+//    println(max)
+//    val map = list.map { it.uppercase() }
+//    map.forEach { println(it) }
+//    val map = list.filter { it.length <= 5 }.map { it.uppercase() }
+//    map.forEach { println(it) }
+//    val any = list.any { it.length < 5 }
+//    val all = list.all { it.length < 5 }
+//    println("$any $all")
+//    Thread{
+//        println("Thread is running")
+//    }.start()
+    if(content != null){
+        printUpperCase()
+    }
 }
+fun printUpperCase(){
+    val upperCase = content!!.uppercase()
+    println(upperCase)
+}
+
+fun doStudy(study: Study?){
+    study?.doHomework()
+    study?.readBooks()
+}
+
+fun getTextLength(text: String?) = text?.length ?: 0
 
 //fun largeNumber(num1: Int,num2: Int): Int{
 //    return max(num1,num2)
